@@ -19,9 +19,9 @@ export default async function User() {
     <div>
       <h1> User List </h1>
 
-      {data.map((item) => (
+      {data.map((item,index) => (
         <div >
-        <h1>
+        <h1 key={index}>
         <span ><Link href={`/users/${item.id}`}>{item.name}</Link></span>
         <span className="item"><Link href={`/users/${item.id}/update`}>Edit</Link></span> 
        
